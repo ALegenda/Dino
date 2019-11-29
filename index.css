@@ -523,55 +523,39 @@ body {
         width: 15.25em;
     }
 }
-.heart {
-    animation: heartbeat 1s infinite;
-    background-color: red;
-    display: inline-block;
-    height: 50px;
-    margin: 0 10px;
-    position: relative;
-    top: 1px;
-    transform: rotate(-45deg);
-    position: absolute;
-    left: 65%; top: 45%;
-    width: 50px;
-}
 
-.heart:before,
-.heart:after {
+/* Базовые стили */
+.heart {
+    position: relative;
+    width: 100px;
+    height: 175px;
+    background-color: red;
+    box-shadow: -1px 0px 2px #444;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    /* Определяем угол наклона */
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+/* Формируем правую часть */
+.heart:before {
+    position: absolute;
+    width: 175px;
+    height: 100px;
+    left: 0;
+    bottom: 0;
     content: "";
     background-color: red;
-    border-radius: 50%;
-    height: 50px;
-    position: absolute;
-    width: 50px;
+    box-shadow: 0px 3px 3px #444444;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 0 50px 50px 0;
 }
-
-.heart:before {
-    top: -25px;
-    left: 0;
-}
-
-.heart:after {
-    left: 25px;
-    top: 0;
-}
-
-@keyframes heartbeat
-{
-    0%
-    {
-        transform: scale( 1 )
-        rotate(-45deg);
-    }
-    20%
-    {
-        transform: scale( 1.25 )
-        rotate(-45deg);
-    }
-    40%
-    {
-        transform: scale( 1.5 )
-        rotate(-45deg);
-    }
+/* Убираем тень при наведении */
+.heart:hover:before, .heart:hover{
+    box-shadow:none;
 }
