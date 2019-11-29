@@ -530,7 +530,7 @@ body {
     height: 50px;
     margin: 0 10px;
     position: relative;
-    top: 0;
+    top: 1px;
     transform: rotate(-45deg);
     position: absolute;
     left: 65%; top: 45%;
